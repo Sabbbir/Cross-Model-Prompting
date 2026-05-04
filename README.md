@@ -31,17 +31,17 @@ The answer, it turns out, is something.
 We applied **OneFormer** — a state-of-the-art segmentation model trained on natural images (everyday objects, street scenes, indoor environments) — directly to brain MRI slices from the BraTS challenge dataset. As expected, the model failed. It labeled tumor regions as walls, food, and furniture.
 
 <div align="center">
-  <img src="assets/figures/phase1/oneformer_failures_grid.png" width="800" alt="OneFormer Failures Grid" />
+  <img src="results/figures/oneformer_failures/oneformer_failures_grid.png" width="800" alt="OneFormer Failures Grid" />
   <p><em>Figure: Grid of failed zero-shot segmentations by OneFormer.</em></p>
 </div>
 
 But buried within roughly 23,000 generated masks, across 1,500 image slices, we found 12 cases where the COCO-pretrained OneFormer had labeled the tumor region as a **"sports ball."**
 
 <div align="center">
-  <img src="assets/figures/phase1/sports_ball_detection.png" width="400" alt="Sports Ball Detection" />
+  <img src="results/figures/sports_ball_verification/sports_ball_detection.png" width="400" alt="Sports Ball Detection" />
   <br/>
-  <img src="assets/figures/phase1/sports_ball_verification_a.png" width="300" alt="Verification A" />
-  <img src="assets/figures/phase1/sports_ball_verification_b.png" width="300" alt="Verification B" />
+  <img src="results/figures/sports_ball_verification/sports_ball_verification_a.png" width="300" alt="Verification A" />
+  <img src="results/figures/sports_ball_verification/sports_ball_verification_b.png" width="300" alt="Verification B" />
   <p><em>Figure: A semantic failure acting as a spatial success. A tumor misclassified as a "sports ball".</em></p>
 </div>
 
@@ -52,7 +52,7 @@ We then asked: **could this semantically wrong but spatially correct mask serve 
 To test this, we used **SegGPT** — a visually prompted segmentation model that segments regions in a target image based on their resemblance to a reference image-mask pair. We gave it the "sports ball" mask as a prompt and asked it to find similar regions in other BraTS slices.
 
 <div align="center">
-  <img src="assets/figures/phase1/seggpt_prompting_mechanism.png" width="800" alt="SegGPT Prompting Mechanism" />
+  <img src="results/figures/sports_ball_verification/seggpt_prompting_mechanism.png" width="800" alt="SegGPT Prompting Mechanism" />
   <p><em>Figure: The SegGPT Prompting Mechanism in action.</em></p>
 </div>
 
@@ -60,7 +60,7 @@ The results were qualitatively striking. SegGPT, guided by this unusual prompt, 
 
 ---
 
-## Why This Matters
+## 🚀 Why This Matters
 
 This study is not presenting a production-ready segmentation system. What it is presenting is a proof-of-concept for a mechanism that has not, to our knowledge, been explicitly investigated: **the deliberate repurposing of cross-domain model misclassifications as prompts for a second model.**
 
@@ -84,9 +84,9 @@ We used the "Brain Tumor Image Dataset: Semantic Segmentation" derived from the 
 
 | MRI Slices | Ground Truth Masks |
 |:---:|:---:|
-| <img src="assets/figures/dataset/mri_slice_17.jpg" width="150"/> | <img src="assets/figures/dataset/gt_mask_17.png" width="150"/> |
-| <img src="assets/figures/dataset/mri_slice_28.jpg" width="150"/> | <img src="assets/figures/dataset/gt_mask_28.png" width="150"/> |
-| <img src="assets/figures/dataset/mri_slice_105.jpg" width="150"/> | <img src="assets/figures/dataset/gt_mask_105.png" width="150"/> |
+| <img src="results/figures/dataset/mri_slice_17.jpg" width="150"/> | <img src="results/figures/dataset/gt_mask_17.png" width="150"/> |
+| <img src="results/figures/dataset/mri_slice_28.jpg" width="150"/> | <img src="results/figures/dataset/gt_mask_28.png" width="150"/> |
+| <img src="results/figures/dataset/mri_slice_105.jpg" width="150"/> | <img src="results/figures/dataset/gt_mask_105.png" width="150"/> |
 
 </div>
 
@@ -102,8 +102,8 @@ Three of these "sports ball" masks were selected as visual prompts. SegGPT ident
 
 | | Source Image | Resulting Mask |
 |:---|:---:|:---:|
-| **Best Prompt** (1112) | <img src="assets/figures/phase2/best_prompt_source_image.jpg" width="200"/> | <img src="assets/figures/phase2/best_prompt_mask.png" width="200"/> |
-| **Worst Prompt** (281) | <img src="assets/figures/phase2/worst_prompt_source_image.jpg" width="200"/> | <img src="assets/figures/phase2/worst_prompt_mask.png" width="200"/> |
+| **Best Prompt** (1112) | <img src="results/figures/seggpt_qualitative/best_prompt_source_image.jpg" width="200"/> | <img src="results/figures/seggpt_qualitative/best_prompt_mask.png" width="200"/> |
+| **Worst Prompt** (281) | <img src="results/figures/seggpt_qualitative/worst_prompt_source_image.jpg" width="200"/> | <img src="results/figures/seggpt_qualitative/worst_prompt_mask.png" width="200"/> |
 
 </div>
 
@@ -121,13 +121,13 @@ The strong variation between prompts indicates that the quality and representati
 
 <div align="center">
   <h4>Dice Score Distributions</h4>
-  <img src="assets/figures/quantitative/dice_distribution_best.png" width="32%" />
-  <img src="assets/figures/quantitative/dice_distribution_worst.png" width="32%" />
-  <img src="assets/figures/quantitative/dice_distribution_combined.png" width="32%" />
+  <img src="results/quantitative/dice_distribution_best.png" width="32%" />
+  <img src="results/quantitative/dice_distribution_worst.png" width="32%" />
+  <img src="results/quantitative/dice_distribution_combined.png" width="32%" />
   
   <h4>IoU vs Dice Boxplots</h4>
-  <img src="assets/figures/quantitative/boxplot_best.png" width="45%" />
-  <img src="assets/figures/quantitative/boxplot_worst.png" width="45%" />
+  <img src="results/quantitative/boxplot_best.png" width="45%" />
+  <img src="results/quantitative/boxplot_worst.png" width="45%" />
 </div>
 
 ---
@@ -138,7 +138,7 @@ The strong variation between prompts indicates that the quality and representati
 .
 ├── README.md
 ├── Thesis_Sabbir_Ahmed.pdf         # Full B.Sc. thesis
-├── Sabbir_Ahmed_CV.pdf             # CV
+├── Final Defense.pdf               # Presentation slides for final defense
 ├── requirements.txt                # Python dependencies
 ├── environment.yml                 # Conda environment specification
 │
@@ -156,4 +156,10 @@ The strong variation between prompts indicates that the quality and representati
 │       ├── visualize_results.py    # Generates overlay figures and plots
 │       └── metrics.py              # Dice and IoU implementations
 │
-└── assets/figures/                 # Mapped output figures required for README
+└── results/
+    ├── figures/                    # Qualitative output and methodology figures
+    │   ├── dataset/
+    │   ├── oneformer_failures/
+    │   ├── seggpt_qualitative/
+    │   └── sports_ball_verification/
+    └── quantitative/               # Plotted quantitative distributions and results
