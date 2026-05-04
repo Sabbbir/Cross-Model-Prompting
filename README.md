@@ -47,6 +47,8 @@
 
 </div>
 
+📄 **[Read the Full Thesis (PDF)](./Thesis_Sabbir_Ahmed.pdf)** &nbsp;·&nbsp; 🎞️ **[Defense Slides](./Final%20Defense.pdf)**
+
 ## 📌 Table of Contents
 
 - [Overview](#-overview)
