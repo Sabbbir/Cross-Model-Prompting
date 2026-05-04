@@ -304,15 +304,16 @@ We selected **3 of the 12 "sports ball" masks** as visual prompts and ran SegGPT
 
 ### Sports Ball as Spatial Signal
 
-<img src="results/figures/sports_ball_verification/sports_ball_detection.png" width="420"/>
+<img src="results/figures/sports_ball_verification/sports_ball_detection.png" width="800"/>
 
-<img src="results/figures/sports_ball_verification/sports_ball_verification_a.png" width="300"/>
+<img src="results/figures/sports_ball_verification/sports_ball_verification_a.png" width="800"/>
+
 &nbsp;
-<img src="results/figures/sports_ball_verification/sports_ball_verification_b.png" width="300"/>
+<img src="results/figures/sports_ball_verification/sports_ball_verification_b.png" width="800"/>
 
 ### SegGPT Guided Outputs
 
-<img src="results/figures/sports_ball_verification/seggpt_prompting_mechanism.png" width="780"/>
+<img src="results/figures/sports_ball_verification/seggpt_prompting_mechanism.png" width="800"/>
 
 </div>
 
@@ -521,6 +522,7 @@ B.Sc. in Computer Science and Engineering
 📧 [sabbir.ahmed.cse19.just@gmail.com](mailto:sabbir.ahmed.cse19.just@gmail.com)
 
 🏫 Jashore University of Science and Technology, Bangladesh
+
 🔗 [GitHub](https://github.com/Sabbbir)
 
 <br/>
