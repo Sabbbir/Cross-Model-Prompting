@@ -509,25 +509,6 @@ All experiments were conducted at the **VMI Lab, Jashore University of Science a
 | System RAM | 32 GB |
 | OS | Ubuntu (Linux) |
 
----
-
-## 📝 Citation
-
-If you reference this work in academic writing, please use the following:
-
-```bibtex
-@misc{ahmed2025guided,
-  author       = {Ahmed, Sabbir},
-  title        = {Guided Unsupervised Segmentation via Cross-Model Prompting},
-  year         = {2025},
-  note         = {B.Sc. Thesis, Department of Computer Science and Engineering,
-                  Jashore University of Science and Technology, Bangladesh.
-                  Supervised by Dr. A F M Shahab Uddin.},
-  url          = {https://github.com/Sabbbir/cross-model-prompting-for-medical-segmentation}
-}
-```
-
----
 
 ## 📬 Contact
 
@@ -536,7 +517,9 @@ If you reference this work in academic writing, please use the following:
 **Sabbir Ahmed**
 B.Sc. in Computer Science and Engineering
 
+
 📧 [sabbir.ahmed.cse19.just@gmail.com](mailto:sabbir.ahmed.cse19.just@gmail.com)
+
 🏫 Jashore University of Science and Technology, Bangladesh
 🔗 [GitHub](https://github.com/Sabbbir)
 
@@ -544,8 +527,6 @@ B.Sc. in Computer Science and Engineering
 
 ---
 
-<sub>
-  Made with care at JUST · May 2025 · MIT Licensed
-</sub>
+
 
 </div>
